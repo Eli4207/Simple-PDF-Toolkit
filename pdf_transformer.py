@@ -25,10 +25,12 @@ def transform_pdf():
                 writer.write(output)
 
             print(o_name + ".pdf ist fertig!")
+            writer.close()
+            output.close()
             c = input("Wollen Sie die Seiten weiterer Dateien drehen? (y oder n) ")
             if c == "n":
+                sleep(2)
                 x = False
-            sleep(2)
 
         except:
             print("Bitte überprüfen Sie ihre Eingaben")
